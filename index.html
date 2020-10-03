@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--Заголовок всей страницы-->
+    <title>Овчинников А.И. Персональный сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<!--Ссылка на ваш гит-->
+    <div id="logo" onClick="window.location='https://github.com/dadasda2'">
+        <span>GitHub</span>
+    </div>
+    <div id="about">
+        <a href="#"  onclick="slowScroll('#team')" title="Команда">Команда</a>
+        <a href="#" onclick="slowScroll('#project')" title="Проект">Проект</a>
+        <a href="#" onclick="slowScroll('#student')" title="Студент">Студент</a>
+        <a href="#" onclick="slowScroll('#labs')" title="Лабораторные">Лабораторные</a>
+    </div>
+</header>
+<div class="custom-back-ground" id="custom-back-ground">
+<div id="top">
+    <h1 id="firstPart">СОЗДАЁМ ИННОВАЦИИ -</h1>
+    <h1> СОХРАНЯЕМ ТРАДИЦИИ!</h1>
+</div>
+<div id="team">
+    <div class="intro">
+        <h2>КОМАНДА МЕЧТЫ!</h2>
+        <span>Мы можем всё! Или почти всё!</span>
+    </div>
+        <img src="https://stankin.ru/uploads/files/file_5c544d6132527.png" height="250" width="450">
+</div>
+    <div id="project">
+        <h2>ПРОЕКТ</h2>
+        <h4>*НАЗВАНИЕ ПРОЕКТА*</h4>
+        <p>Здесь должно быть краткое описание.
+            Здесь должно быть краткое описание.
+            Здесь должно быть краткое описание.
+            Здесь должно быть краткое описание.
+            Здесь должно быть краткое описание.
+            Здесь должно быть краткое описание.
+            Здесь должно быть краткое описание.</p>
+    </div>
+<div id="student">
+    <h2>О СТУДЕНТЕ</h2>
+    <h4>Овчинников Александр Игоревич</h4>
+    <p>Студент 1-го курса магистратуры, группа ИДМ-20-06</p>
+    <p>Исполняющий обязанности разработчика в &laquoКоманде Мечты&raquo</p>
+</div>
+<!--Название файлов обязательно должно совпадать с названиями в ссылке!-->
+<div id="labs">
+    <h2>ЛАБОРАТОРНЫЕ</h2>
+    <h4>Отчёты по лабораторным работам</h4>
+    <div onclick="">
+        <span class="title">Лабораторная работа 1</span><br>
+        <span class="heading">*название*</span>
+        <p>*содержание, содержание, содержание, содержание, содержание, содержание, содержание, содержание,
+            содержание, содержание, содержание, содержание, содержание, содержание, содержание, содержание*</p>
+        <a href="#" onclick="window.location='../app-data/labs/Овчинников А.И. ИДМ 20-06 лабораторная работа 1.docx'">Отчёт по лабораторной работе 1</a>
+    </div>
+    <div onclick="">
+        <span class="title">Лабораторная работа 2</span><br>
+        <span class="heading">*название*</span>
+        <p>*содержание, содержание, содержание, содержание, содержание, содержание, содержание, содержание,
+            содержание, содержание, содержание, содержание, содержание, содержание, содержание, содержание*</p>
+        <a href="#" onclick="window.location='../app-data/labs/Овчинноков А.И. ИДМ 20-06 лабораторная работа 2.docx'">Отчёт по лабораторной работе 2</a>
+    </div>
+    <div onclick="">
+        <span class="title">Лабораторная работа 3</span><br>
+        <span class="heading">*название*</span>
+        <p>*содержание, содержание, содержание, содержание, содержание, содержание, содержание, содержание,
+            содержание, содержание, содержание, содержание, содержание, содержание, содержание, содержание*</p>
+        <a href="#" onclick="window.location='../app-data/labs/Овчинноков А.И. ИДМ 20-06 лабораторная работа 3.docx'">Отчёт по лабораторной работе 3</a>
+    </div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="back-grounds/dots/three.r119.min.js"></script>
+<script src="back-grounds/dots/vanta.dots.min.js"></script>
+<script src="back-grounds/dots/custom-back-ground.js"></script>
+<script>
+    function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 500);
+    }
+
+    $(document).on("scroll", function () {
+        if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+        else
+            $("header").attr("class", "fixed");
+    });
+</script>
+</body>
+</html>
